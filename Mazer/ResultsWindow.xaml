@@ -1,0 +1,25 @@
+﻿<Window x:Class="Mazer.ResultsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=DotNetProjects.DataVisualization.Toolkit"
+        Title="ResultsWindow" Width="1024" Height="768"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+
+        <chartingToolkit:Chart Title="{Binding SourceName}" CrosshairVisibility="Hidden"
+                                   HorizontalAlignment="Stretch"
+                                   VerticalAlignment="Stretch">
+            <chartingToolkit:ColumnSeries Title="Algorithm Times"
+                DependentValuePath="Value"
+                                          IndependentValuePath="Key"
+                                          ItemsSource="{Binding Data}" 
+                                          />
+            <chartingToolkit:Chart.Axes>
+                <chartingToolkit:LinearAxis Orientation="Y" 
+                                        Title="Time (ms)"
+                                        ShowGridLines="True"
+                                        />
+            </chartingToolkit:Chart.Axes>
+        </chartingToolkit:Chart>
+    </Grid>
+</Window>
