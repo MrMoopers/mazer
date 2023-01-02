@@ -1,4 +1,4 @@
-# Mazer
+# Mazer: Evaluating Algorithms for Generating & Solving Mazes in Real‑Time
 
 A C# .NET system for generating mazes and evaluating maze-solving algorithms in real time.
 
